@@ -184,7 +184,7 @@ module.exports = function(RED) {
           if (proportional > 0) {
             power = 0.0;
           } else if (proportional < 0) {
-            power = 1.0;
+            power = 10.0;
           } else {
             // exactly on sp so leave power as it was last time round
             power = node.last_power;
@@ -215,7 +215,7 @@ module.exports = function(RED) {
       if (power < 0.0) {
         power = 0.0;
       } else if (power > 1.0) {
-        power = 1.0;
+        power = 10.0;
       }
       node.last_power = power;
       ans =  {payload: power, pv: node.pv, setpoint: node.setpoint, proportional: proportional, integral: node.integral, 
