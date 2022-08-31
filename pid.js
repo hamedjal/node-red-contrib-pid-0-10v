@@ -214,7 +214,7 @@ module.exports = function(RED) {
       }
       if (power < 0.0) {
         power = 0.0;
-      } else if (power > 1.0) {
+      } else if (power > 10.0) {
         power = 10.0;
       }
       node.last_power = power;
