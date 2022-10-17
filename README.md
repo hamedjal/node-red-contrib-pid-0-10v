@@ -1,4 +1,4 @@
-node-red-contrib-pid
+node-red-contrib-pid-0-10v
 =====================
 
 A [Node-RED] node which operates as a PID loop controller node intended for the control of real world processes.
@@ -9,7 +9,7 @@ Install
 
 Run the following command in the root directory of your Node-RED install
 
-    npm install node-red-contrib-pid
+    npm install node-red-contrib-pid-0-10v
 
 
 Usage
