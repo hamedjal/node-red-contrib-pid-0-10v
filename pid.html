@@ -15,7 +15,7 @@
 -->
 
 <script type="text/javascript">
-    RED.nodes.registerType('PID',{
+    RED.nodes.registerType('PID10V',{
         category: 'function',
         color: '#a6bbcf',
         defaults: {
@@ -34,12 +34,12 @@
         outputs:1,
         icon: "function.png",
         label: function() {
-            return this.name||"PID";
+            return this.name||"PID10V";
         }
     });
 </script>
 
-<script type="text/x-red" data-template-name="PID">
+<script type="text/x-red" data-template-name="PID10V">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
@@ -82,10 +82,10 @@
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="PID">
+<script type="text/x-red" data-help-name="PID10V">
     <p>A PID loop controller node intended for the control of real world processes.</p>
     
-    <p>The node is regularly given a process value and is configured (or given) a setpoint and tuning parameters and generates a required power output between 0 and 1 in <b>msg.payload</b> using a Proportional+Integral+Derivative algorithm.</p>
+    <p>The node is regularly given a process value and is configured (or given) a setpoint and tuning parameters and generates a required power output between 0 and 10 in <b>msg.payload</b> using a Proportional+Integral+Derivative algorithm.</p>
     
     <p>Any message received with a <b>msg.topic</b> other than those defined below is assumed to contain the current process value in <b>msg.payload</b> and the control algorithm will be run, passing on the required power in <b>msg.payload</b>.</p>
     
