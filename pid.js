@@ -17,7 +17,7 @@
 module.exports = function(RED) {
   "use strict";
   
-  function PID(config) {
+  function PID10V(config) {
     RED.nodes.createNode(this,config);
     var node = this;
     node.setpoint = Number(config.setpoint);
@@ -223,7 +223,7 @@ module.exports = function(RED) {
       return ans;
     }
   }
-  RED.nodes.registerType("PID",PID);
+  RED.nodes.registerType("PID10V",PID10V);
 }
 
   
